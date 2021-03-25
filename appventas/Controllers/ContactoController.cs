@@ -20,12 +20,15 @@ namespace appventas.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Message"] = "";
             return View();
         }
 
-
-         public IActionResult Create()
+        [HttpPost]
+         public IActionResult Create( contacto objContacto)
         {
+            objContacto.Status ="Registrado" ;
+            ViewData["Message"] = "el contacto ya esta " + objContacto.Status;
             return View("Index");
         }
 }
