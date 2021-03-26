@@ -1,0 +1,22 @@
+@model Producto
+
+
+<form asp-controller="Producto" asp-action="MetodoVenta">
+     <label asp-for="Nombre" class="control-label"></label>
+     <input asp-for="Nombre" class="form-control" />
+
+     <label asp-for="Precio" class="control-label"></label>
+     <input asp-for="Precio" class="form-control" />
+
+       <label asp-for="Cantidad" class="control-label"></label>
+     <input asp-for="Cantidad" class="form-control" />
+
+<br>
+<div class="form-group">
+<button type="submit" class="btn btn-dark">Calcular</button>
+</div>
+
+</form>
+
+<h1>@ViewData["Messages"]</h1> <br>
+<h1>@ViewData["Message"]</h1>
